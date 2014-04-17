@@ -6,10 +6,10 @@ The bot which tweets #npmawesome posts.
 
 Install with [npm](https://npmjs.org/package/npmawesome-twitter-bot).
 
-    npm install --save npmawesome-twitter-bot
+    npm install -g npmawesome-twitter-bot
 
 ## Changelog
 
 ## Author
 
-Copyright 2014, [André König](http://) (andre.koenig@posteo.de)
+Copyright 2014, [André König](http://iam.andrekoenig.info) (andre.koenig@posteo.de)
