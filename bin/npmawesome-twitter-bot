@@ -1,0 +1,86 @@
+#!/usr/bin/env node
+
+/*
+ * npmawesome-twitter-bot
+ *
+ * Copyright(c) 2014 André König <andre.koenig@posteo.de>
+ * MIT Licensed
+ *
+ */
+
+/**
+ * @author André König <andre.koenig@posteo.de>
+ *
+ */
+
+'use strict';
+
+// Usage:
+//
+// npmawesome-twitter-bot --dry-run --all
+
+// --dry-run
+//     does not send tweets to twitter.
+
+// --all
+//     Fetches all available items on startup and then listens for new items.
+
+// --quiet
+//     No output on stdout
+
+/**
+ * Module dependencies
+ *
+ */
+var util = require('util');
+var argv = require('yargs').argv;
+var Bot = require('../');
+
+var bot = Bot.create({
+    "feed": {
+        "uri": "http://localhost:3000/npmawesome.atom",
+        "interval": 5000
+    },
+    "twitter": {
+        "consumerKey": "The Twitter API consumer key.",
+        "consumerSecret": "The Twitter API consumer secret.",
+        "accessToken": "The Twitter API access token",
+        "accessTokenSecret": "The Twitter API access token secret"    
+    }
+});
+
+var printer = {};
+
+/**
+ * DOCME
+ * 
+ * @param  {[type]} err [description]
+ * @return {[type]}     [description]
+ *
+ */
+printer.error = function error (err) {
+    console.error(err);
+};
+
+/**
+ * DOCME
+ *
+ * @param  {[type]} picks [description]
+ * @return {[type]}       [description]
+ *
+ */
+printer.pick = function pick (pick) {
+    return console.log(pick.title);
+};
+
+bot.watch()
+    .on('new', function onAwesome (pick) {
+        if (!argv.quiet) {
+            printer.pick(pick);
+        }
+
+        if (!argv.dryRun) {
+            // bot.tweet(pick);
+        }
+    })
+    .on('error', printer.error);
