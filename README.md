@@ -1,4 +1,4 @@
-# npmawesome-bot
+# npmawesome-bot [![Build Status](https://travis-ci.org/npmawesome/bot.svg?branch=master)](https://travis-ci.org/npmawesome/bot)
 
 The bot which is responsible for filling the [@npmawesome](http://twitter.com/npmawesome) Twitter account when new picks arrive on [npmawesome.com](http://npmawesome.com).
 
