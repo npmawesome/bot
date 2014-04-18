@@ -6,6 +6,7 @@
     "email": "andre.koenig@posteo.de"
   },
   "version": "0.1.0",
+  "bin": "./cli/index.js",
   "repository": {
     "url": "git@github.com:akoenig/npmawesome-twitter-bot.git"
   },

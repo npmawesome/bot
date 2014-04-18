@@ -1,0 +1,12 @@
+{
+    "feed": {
+        "uri": "http://feeds.feedburner.com/npmawesome?format=xml",
+        "interval": 300000
+    },
+    "twitter": {
+        "apiKey": "The Twitter API api key.",
+        "apiSecret": "The Twitter API api secret.",
+        "accessToken": "The Twitter API access token",
+        "accessTokenSecret": "The Twitter API access token secret"    
+    }
+}
