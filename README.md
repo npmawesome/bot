@@ -25,7 +25,17 @@ The bot will create an configuration file in your home directory on the initial 
         }
     }
 
-## CLI
+## CLI usage
+
+    Examples:
+      npmawesome-bot --watch    "Realtime" #npmawesome updates.
+
+
+    Options:
+      --watch    You will see new #npmawesome posts as they arrive!  [required]
+      --quiet    No stdout output.
+      --dry-run  No fear, no Twitter interaction in this mode. :)
+
 
 ## Changelog
 
