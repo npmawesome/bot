@@ -39,6 +39,10 @@ The bot will create an configuration file in your home directory on the initial 
 
 ## Changelog
 
+### Version 0.2.0 (Future)
+
+- Spec for the Twitter API abstraction
+
 ### Version 0.1.0 (20140418)
 
 - FeedEmitter for observing the #npmawesome feed.
