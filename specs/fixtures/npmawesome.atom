@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/atom10full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0">
+    <title>npm awesome</title>
+    <subtitle>Daily dose of awesome NPM modules for Node.js, old and new!</subtitle>
+    
+    <link href="http://npmawesome.com" />
+    <id>http://npmawesome.com</id>
+    <updated>2014-04-17T13:59:28.061Z</updated>
+    <author>
+        <name>Alex Gorbatchev</name>
+    </author>
+
+  
+    <entry>
+        <title>EHLO</title>
+        <updated>2014-04-18T03:00:00.000Z</updated>
+        <id>http://npmawesome.com/is/awesome</id>
+        <content type="plain"></content>
+    </entry>
+    
+</feed>
