@@ -1,5 +1,5 @@
 {
-  "name": "npmawesome-twitter-bot",
+  "name": "npmawesome-bot",
   "description": "The bot which tweets #npmawesome posts.",
   "author": {
     "name": "André König",
@@ -8,7 +8,7 @@
   "version": "0.1.0",
   "bin": "./cli/index.js",
   "repository": {
-    "url": "git@github.com:akoenig/npmawesome-twitter-bot.git"
+    "url": "git@github.com:akoenig/npmawesome-bot.git"
   },
   "license": "MIT",
   "main": "index.js",

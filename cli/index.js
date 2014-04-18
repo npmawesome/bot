@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /*
- * npmawesome-twitter-bot
+ * npmawesome-bot
  *
  * Copyright(c) 2014 André König <andre.koenig@posteo.de>
  * MIT Licensed
@@ -15,25 +15,27 @@
 
 'use strict';
 
-// Usage:
-//
-// npmawesome-twitter-bot --dry-run --all
-
-// --dry-run
-//     does not send tweets to twitter.
-
-// --quiet
-//     No output on stdout
-
 /**
  * Module dependencies
  *
  */
-var argv = require('yargs').argv;
+var argv = require('yargs');
 
 var Bot = require('../');
 var utilities = require('./utilities');
 var rc = require('./rc');
+
+argv = argv
+    .usage('A Twitter bot and realtime consumer for #npmawesome.\n')
+    .example('npmawesome-bot --watch', '"Realtime" #npmawesome updates.')
+    .alias('q', 'quiet')
+    .alias('d', 'dry-run')
+    .alias('w', 'watch')
+    .demand('watch')
+    .describe('watch', 'You will see new #npmawesome posts as they arrive!')
+    .describe('quiet', 'No stdout output.')
+    .describe('dry-run', 'No fear, no Twitter interaction in this mode. :)')
+    .argv;
 
 var bot;
 

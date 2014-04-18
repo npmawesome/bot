@@ -1,5 +1,5 @@
 /*
- * npmawesome-twitter-bot
+ * npmawesome-bot
  *
  * Copyright(c) 2014 André König <andre.koenig@posteo.de>
  * MIT Licensed
