@@ -1,1 +1,4 @@
-node_modules
+specs
+.jshintrc
+.travis.yml
+gulpfile.js

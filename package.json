@@ -18,5 +18,8 @@
     "gulp-jasmine": "^0.2.0",
     "gulp": "^3.5.5",
     "gulp-jshint": "^1.5.0"
+  },
+  "dependencies": {
+    "feedparser": "^0.16.6"
   }
 }
