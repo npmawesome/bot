@@ -14,10 +14,16 @@
 'use strict';
 
 var pkg = require('./package.json');
-var Core = require('./lib/');
-var Feed = Core.Feed;
-var Twitter = Core.Twitter;
+var Feed = require('./lib/').Feed;
+var Twitter = require('./lib/').Twitter;
 
+/**
+ * The #npmawesome Twitter bot :)
+ *
+ * Options: See path.join(__dirname, 'etc', 'template')
+ * for configuration options.
+ *
+ */
 function Bot (options) {
     this.name = pkg.name;
     this.version = pkg.version;
@@ -28,9 +34,9 @@ function Bot (options) {
 }
 
 /**
- * DOCME
+ * Observes the #npmawesome feed for new items.
  *
- * @return {[type]} [description]
+ * @return {Feed (EventEmitter)}
  *
  */
 Bot.prototype.watch = function watch () {
@@ -38,11 +44,11 @@ Bot.prototype.watch = function watch () {
 };
 
 /**
- * DOCME
+ * Sends a pick to the Twitter API.
  *
- * @param  {[type]}   pick     [description]
- * @param  {Function} callback [description]
- * @return {[type]}            [description]
+ * @param  {object} pick The "objectified" entry from the XML feed.
+ * @param  {Function} callback
+ *
  *
  */
 Bot.prototype.tweet = function tweet (pick, callback) {
@@ -57,14 +63,15 @@ Bot.prototype.tweet = function tweet (pick, callback) {
         });
     }
 
-    return this.$$twitter.post(pick.title + ' - ' + pick.guid , callback);
+    // guid = uri; see the XML source for further information.
+    return this.$$twitter.tweet(pick.title + ' - ' + pick.guid , callback);
 };
 
 /**
- * DOCME
+ * Creates an instance of the Bot object.
  *
- * @param  {[type]} options [description]
- * @return {[type]}         [description]
+ * @param  {object} options
+ * @return {Bot}
  *
  */
 exports.create = function create (options) {
